@@ -20,9 +20,11 @@ Cada item no array `news` deve seguir este formato:
     "content": "Descrição breve do conteúdo.",
     "url": "https://link-de-destino.com",
     "size": "large | medium | small",
-    "image": "https://runaris.com.br/ghost/images/nome-da-imagem.jpg"
+    "image": "https://runaris.com.br/ghost/news/images/nome-da-imagem.jpg"
 }
 ```
+
+> **Nota**: O arquivo final é servido em `https://runaris.com.br/ghost/news/news.json`.
 
 ### Tamanhos (Size):
 - **large**: Ocupa a largura total da sidebar. Ideal para anúncios principais.

@@ -10,7 +10,7 @@ load_dotenv()
 FTP_HOST = os.getenv('FTP_HOST')
 FTP_USER = os.getenv('FTP_USER')
 FTP_PASS = os.getenv('FTP_PASS')
-FTP_DIR = os.getenv('FTP_DIR', '/public_html/ghost')
+FTP_DIR = os.getenv('FTP_DIR', '/public_html/ghost/news')
 
 def validate_json(file_path):
     print(f"🔍 Validando {file_path}...")
