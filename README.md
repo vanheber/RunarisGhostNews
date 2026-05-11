@@ -6,7 +6,12 @@ Repositório central para gestão do feed de notícias "The Author's Pulse".
 
 1.  Edite o arquivo `news.json` seguindo o modelo.
 2.  Adicione imagens na pasta `images/`.
-3.  Execute `python deploy.py` para publicar as alterações.
+3.  Execute `python3 deploy.py` para publicar as alterações. O script enviará o `news.json` e o `.htaccess` (CORS) para o servidor.
+
+## ⚙️ Requisitos Técnicos
+
+*   **CORS**: O repositório inclui um arquivo `.htaccess` pré-configurado para permitir que o Dashboard do Ghost acesse o JSON de qualquer origem.
+*   **Deploy**: Utiliza FTP nativo do Python, sem dependências externas (não requer `python-dotenv`).
 
 ## 📐 Estrutura do JSON
 

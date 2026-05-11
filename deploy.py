@@ -2,10 +2,18 @@ import os
 import json
 import ftplib
 from pathlib import Path
-from dotenv import load_dotenv
+# Carregar configurações (.env manual para evitar dependências externas)
+def load_env():
+    env_path = Path(__file__).parent / '.env'
+    if env_path.exists():
+        with open(env_path, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line and '=' in line and not line.startswith('#'):
+                    key, value = line.split('=', 1)
+                    os.environ[key.strip()] = value.strip().strip('"').strip("'")
 
-# Carregar configurações
-load_dotenv()
+load_env()
 
 FTP_HOST = os.getenv('FTP_HOST')
 FTP_USER = os.getenv('FTP_USER')
@@ -56,10 +64,16 @@ def deploy():
                         pass
                 ftp.cwd(FTP_DIR)
 
-            # Upload do news.json
-            print(f"📤 Subindo {news_file.name}...")
-            with open(news_file, 'rb') as f:
-                ftp.storbinary(f'STOR {news_file.name}', f)
+            # Arquivos para subir
+            files_to_upload = ['news.json', '.htaccess']
+            for filename in files_to_upload:
+                local_file = Path(filename)
+                if local_file.exists():
+                    print(f"📤 Subindo {filename}...")
+                    with open(local_file, 'rb') as f:
+                        ftp.storbinary(f'STOR {filename}', f)
+                else:
+                    print(f"⚠️ Aviso: Arquivo {filename} não encontrado localmente.")
             
             # TODO: Futuramente implementar upload recursivo da pasta images/
             
