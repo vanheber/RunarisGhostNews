@@ -1,0 +1,30 @@
+{
+    "news": [
+        {
+            "id": "welcome",
+            "type": "novidade",
+            "title": "Bem-vindo ao Pulso do Autor",
+            "content": "Este é o seu canal direto de notícias e novidades do ecossistema Runaris Ghost. Fique por dentro de cada atualização do projeto.",
+            "url": "https://runaris.com.br",
+            "size": "large",
+            "image": "https://runaris.com.br/ghost/images/welcome.jpg"
+        },
+        {
+            "id": "yt-demo",
+            "type": "video",
+            "title": "Demo: Como usei o Ghost para planejar meu novo romance",
+            "content": "",
+            "url": "https://youtube.com/runaris",
+            "size": "medium",
+            "image": "https://runaris.com.br/ghost/images/yt-thumb.jpg"
+        },
+        {
+            "id": "donation-alert",
+            "type": "release",
+            "title": "Apoie o Projeto",
+            "content": "Gostou do Runaris Ghost? Considere fazer uma doação para manter o desenvolvimento ativo.",
+            "url": "https://runaris.com.br/donate",
+            "size": "medium"
+        }
+    ]
+}
