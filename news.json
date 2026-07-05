@@ -4,26 +4,26 @@
             "id": "welcome",
             "type": "novidade",
             "title": "Bem-vindo ao Pulso do Autor",
-            "content": "Este é o seu canal direto de notícias e novidades do ecossistema Runaris Ghost. Fique por dentro de cada atualização do projeto.",
-            "url": "https://runaris.com.br",
+            "content": "Este é o seu canal direto de notícias e novidades do ecossistema Runaris e Imaginaris. Fique por dentro de cada atualização dos projetos.",
+            "url": "https://imaginaris.com.br",
             "size": "large",
-            "image": "https://runaris.com.br/ghost/images/welcome.jpg"
+            "image": "https://imaginaris.com.br/assets/img/machines.web"
         },
         {
-            "id": "yt-demo",
-            "type": "video",
-            "title": "Demo: Como usei o Ghost para planejar meu novo romance",
+            "id": "Descubra",
+            "type": "Info",
+            "title": "Conheça as obras literárias e música do autor.",
             "content": "",
-            "url": "https://youtube.com/runaris",
+            "url": "https://awv.imaginaris.com.br",
             "size": "medium",
-            "image": "https://runaris.com.br/ghost/images/yt-thumb.jpg"
+            "image": "https://scontent.fbau3-2.fna.fbcdn.net/v/t39.30808-6/485769582_1201629328612023_4741090547164517554_n.png"
         },
         {
             "id": "donation-alert",
             "type": "release",
             "title": "Apoie o Projeto",
-            "content": "Gostou do Runaris Ghost? Considere fazer uma doação para manter o desenvolvimento ativo.",
-            "url": "https://runaris.com.br/donate",
+            "content": "Gostou do Runaris Ghost ou Warp? Considere fazer uma doação para manter o desenvolvimento ativo.",
+            "url": "https://www.paypal.com/donate/?business=vanheber@gmail.com",
             "size": "medium"
         }
     ]
