@@ -75,7 +75,24 @@ def deploy():
                 else:
                     print(f"⚠️ Aviso: Arquivo {filename} não encontrado localmente.")
             
-            # TODO: Futuramente implementar upload recursivo da pasta images/
+            # Upload recursivo da pasta images/
+            images_dir = Path('images')
+            if images_dir.exists() and images_dir.is_dir():
+                print(f"📤 Subindo pasta images/...")
+                # Garantir que o diretório images/ existe no FTP
+                try:
+                    ftp.cwd('images')
+                except:
+                    ftp.mkd('images')
+                    ftp.cwd('images')
+                ftp.cwd(FTP_DIR)  # volta ao diretório base
+                for img_file in images_dir.iterdir():
+                    if img_file.is_file():
+                        print(f"  📤 {img_file.name}...")
+                        with open(img_file, 'rb') as f:
+                            ftp.storbinary(f'STOR images/{img_file.name}', f)
+            else:
+                print(f"⚠️ Aviso: Pasta images/ não encontrada.")
             
             print("✨ Deploy concluído com sucesso!")
             
